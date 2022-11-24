@@ -11,7 +11,7 @@ export const bgChanger = (path: string) => {
       return homeBg;
       break;
     case "/contact":
-      return aboutBg;
+      return homeBg;
       break;
     case "/about":
       return aboutBg;

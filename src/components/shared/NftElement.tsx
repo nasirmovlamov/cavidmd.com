@@ -4,11 +4,13 @@ import { Link } from "react-router-dom";
 export const NftElement = ({
   imgSrc,
   title,
-  downloadLink
+  downloadLink,
+  detailsLink
 }: {
   imgSrc: string;
   title: string;
   downloadLink: string;
+  detailsLink: string;
 }) => {
   const downloadNFT = () => {
     window.open(downloadLink, "_blank");
@@ -28,9 +30,9 @@ export const NftElement = ({
           >
             DOWNLOAD
           </button>
-          <Link to={"/details"} className="text-xl underline">
+          <a href={detailsLink} className="text-xl underline" target={"_blank"} rel="noreferrer">
             Details
-          </Link>
+          </a>
         </div>
       </div>
     </div>

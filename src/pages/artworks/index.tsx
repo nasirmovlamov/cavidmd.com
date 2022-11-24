@@ -13,7 +13,7 @@ import React from "react";
 
 export const Artworks = () => {
   return (
-    <div className="flex flex-wrap gap-8 mt-14 mx-auto 2xl:w-[1400px]">
+    <div className="flex flex-wrap gap-8 mt-14  mx-auto justify-center 2xl:justify-start  2xl:max-w-[1400px]">
       <ArtElement imgSrc={nft1} />
       <ArtElement imgSrc={nft2} />
       <ArtElement imgSrc={nft3} />

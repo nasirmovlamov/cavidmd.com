@@ -1,3 +1,4 @@
+import { MetaMaskProvider } from "metamask-react";
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
 
@@ -7,13 +8,15 @@ import { Routes } from "./routes";
 
 export const App = () => {
   return (
-    <BrowserRouter>
-      <GlobalContextProvider>
-        <Layout>
-          <Routes />
-        </Layout>
-      </GlobalContextProvider>
-    </BrowserRouter>
+    <MetaMaskProvider>
+      <BrowserRouter>
+        <GlobalContextProvider>
+          <Layout>
+            <Routes />
+          </Layout>
+        </GlobalContextProvider>
+      </BrowserRouter>
+    </MetaMaskProvider>
   );
 };
 
