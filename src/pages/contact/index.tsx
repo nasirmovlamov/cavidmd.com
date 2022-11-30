@@ -9,7 +9,7 @@ import React from "react";
 
 export const Contact = () => {
   return (
-    <div className="ml-8 md:mx-auto  flex flex-wrap w-max gap-5 xl:gap-36 flex-col xl:flex-row md:gap-y-20">
+    <div className="ml-8 md:mx-auto  flex flex-wrap w-max gap-5 xl:gap-36 flex-col xl:flex-row md:gap-y-20 mb-20">
       <div className="mt-6 md:mt-44 flex flex-col flex-wrap w-max sm:w-[389px] text-white gap-y-4 md:gap-y-14">
         <h1 className="w-full text-3xl  md:text-7xl text-[#B8FE00] font-bold">
           CONTACT <br /> WITH ME
@@ -41,7 +41,7 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-wrap flex-col  text-xl text-white w-[300px] md:w-[403px]">
+      <div className="mt-6 md:mt-44 flex flex-wrap flex-col  text-xl text-white w-[300px] md:w-[403px]">
         <div className="flex flex-col gap-5 w-full">
           <label htmlFor="" className="font-bold">
             Full Name

@@ -5,6 +5,8 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { bgChanger } from "utility/bgChanger";
 
+import { headerLinkChecker } from "@/utility/headerLinkChecker";
+
 import { GlobalContext } from "../contexts/GlobalContext";
 import { MobileDot } from "./MobileDot";
 
@@ -65,9 +67,17 @@ export const MobileMenu = () => {
         </div>
         <div className="flex gap-2 items-center h-[23px]">
           <MobileDot path={"/roadmap"} />
-          <Link to={"/roadmap"} className="leading-4">
+          <a
+            href={
+              "https://firebasestorage.googleapis.com/v0/b/nft-metamask.appspot.com/o/frontend.pdf?alt=media&token=3b5607f5-60d7-4eec-b7bd-0ecd7b7127ca"
+            }
+            target={"_blank"}
+            download
+            rel="noreferrer"
+            className="leading-4"
+          >
             ROADMAP
-          </Link>
+          </a>
         </div>
       </div>
 

@@ -113,11 +113,11 @@ export const Asset = () => {
         <div className="flex flex-wrap flex-col mx-auto w-max items-center gap-9 md:mt-[261px]">
           <button
             onClick={connect}
-            className="w-[300px] sm:w-[401px] h-[91px] bg-transparent text-3xl justify-center items-center border-2 border-[#B8FE00] rounded-xl text-white hover:bg-[#B8FE00] hover:text-black transition-colors"
+            className="w-[261px] h-[61px]  text-2xl sm:w-[401px] sm:h-[91px] bg-transparent md:text-3xl justify-center items-center border-2 border-[#B8FE00] rounded-xl text-white hover:bg-[#B8FE00] hover:text-black transition-colors"
           >
             CONNECT WALLET
           </button>
-          <p className="text-white 2xl:w-[1348px] text-3xl text-center">
+          <p className="text-white w-[360px] text-base  sm:w-[600px]  md:w-[760px]  2xl:w-[1348px] sm:text-3xl text-center">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
             dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
           </p>

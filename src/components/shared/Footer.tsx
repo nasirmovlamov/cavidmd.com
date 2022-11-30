@@ -8,7 +8,7 @@ import React from "react";
 export const Footer = () => {
   return (
     <div
-      className="pt-10 md:pt-1 mt-10 z-10 flex flex-wrap gap-y-6 justify-between px-16 box-content md:box-border py-4 bg-transparent bg-no-repeat bg-cover"
+      className=" pt-10 md:pt-1  z-10 flex flex-wrap gap-y-6 justify-between px-16 box-content md:box-border py-5  bg-black bg-no-repeat bg-cover"
       style={{ backgroundImage: `url(${footerBg})` }}
     >
       <div>© 2022 CAVID MAMMADLI. ALL RIGHTS RESERVED</div>

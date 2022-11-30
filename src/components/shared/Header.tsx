@@ -36,9 +36,13 @@ export const Header = () => {
         ASSET
       </Link>
       <a
-        href={"www.google.az"}
+        href={
+          "https://firebasestorage.googleapis.com/v0/b/nft-metamask.appspot.com/o/frontend.pdf?alt=media&token=3b5607f5-60d7-4eec-b7bd-0ecd7b7127ca"
+        }
+        target={"_blank"}
         download
         className={`${headerLinkChecker(location.pathname, "/roadmap")} hidden md:flex`}
+        rel="noreferrer"
       >
         ROADMAP
       </a>

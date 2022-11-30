@@ -10,11 +10,7 @@ export const Home = () => {
         src={homeElement}
         alt="cavidmd 3d"
       />
-      <img
-        className="object-cover h-56  2xl:w-[1582px] mx-auto bloack md:hidden mt-28"
-        src={mobileHomeElement}
-        alt="cavidmd 3d"
-      />
+      <img className="object-cover h-56   mx-auto bloack md:hidden mt-28" src={mobileHomeElement} alt="cavidmd 3d" />
     </div>
   );
 };

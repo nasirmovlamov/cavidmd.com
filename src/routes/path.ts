@@ -4,6 +4,7 @@ const HOME = BASE_URL;
 
 const ABOUT = "/about";
 const ARTWORK = "/artwork";
+const ARTWORK_ID = "/artwork/:id";
 const CONTACT = "/contact";
 const NFT = "/nft";
 const ASSET = "/asset";
@@ -13,6 +14,7 @@ interface Path {
   HOME: typeof HOME;
   ABOUT: typeof ABOUT;
   ARTWORK: typeof ARTWORK;
+  ARTWORK_ID: typeof ARTWORK_ID;
   CONTACT: typeof CONTACT;
   NFT: typeof NFT;
   ASSET: typeof ASSET;
@@ -34,6 +36,7 @@ export const PATH: Path = {
   HOME,
   ABOUT,
   ARTWORK,
+  ARTWORK_ID,
   CONTACT,
   NFT,
   ASSET,
