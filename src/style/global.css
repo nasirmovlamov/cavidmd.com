@@ -1,0 +1,13 @@
+@font-face {
+  font-family: "Rene Bieder Alt Demo";
+  src: url("../fonts/Rene Bieder - Galano Grotesque Alt DEMO Bold.otf");
+}
+
+@font-face {
+  font-family: "Rene Bieder Demo";
+  src: url("../fonts/Rene Bieder - Galano Grotesque DEMO Bold.otf");
+}
+
+* {
+  font-family: "Rene Bieder Demo";
+}
