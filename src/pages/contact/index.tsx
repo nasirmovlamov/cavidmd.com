@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import contactArrow from "images/contact-arrow.svg";
 import contactDiscord from "images/contact-discord.svg";
 import contactInstagram from "images/contact-instagram.svg";
@@ -5,9 +6,23 @@ import contactReddit from "images/contact-reddit.svg";
 import contactTwitter from "images/contact-twitter.svg";
 import inputBg from "images/inputBg.png";
 import textareaBg from "images/textareaBg.png";
-import React from "react";
+import React, { FormEvent, useRef } from "react";
+import toast from "react-hot-toast";
 
+const notify = () => toast.success(" Message sent successfully ", { duration: 3000, position: "top-right" });
+const notifyError = () => toast.error("Something went wrong!", { duration: 3000, position: "top-right" });
 export const Contact = () => {
+  const form = useRef<any>();
+  const sendEmail = async (e: FormEvent) => {
+    e.preventDefault();
+    try {
+      const response = await emailjs.sendForm("service_f1v3jiq", "template_t8ft1ba", form.current, "FVKe1ESsu-amgS5E4");
+      console.log(response);
+      notify();
+    } catch (error) {
+      notifyError();
+    }
+  };
   return (
     <div className="ml-8 md:mx-auto  flex flex-wrap w-max gap-5 xl:gap-36 flex-col xl:flex-row md:gap-y-20 mb-20">
       <div className="mt-6 md:mt-44 flex flex-col flex-wrap w-max sm:w-[389px] text-white gap-y-4 md:gap-y-14">
@@ -41,12 +56,18 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <div className="mt-6 md:mt-44 flex flex-wrap flex-col  text-xl text-white w-[300px] md:w-[403px]">
+      <form
+        onSubmit={sendEmail}
+        ref={form}
+        className="mt-6 md:mt-44 flex flex-wrap flex-col  text-xl text-white w-[300px] md:w-[403px]"
+      >
         <div className="flex flex-col gap-5 w-full">
           <label htmlFor="" className="font-bold">
             Full Name
           </label>
           <input
+            name="user_name"
+            required
             style={{
               background: "transparent",
               backgroundImage: `url(${inputBg})`,
@@ -64,6 +85,8 @@ export const Contact = () => {
             E-mail Address
           </label>
           <input
+            required
+            name="user_email"
             style={{
               background: "transparent",
               backgroundImage: `url(${inputBg})`,
@@ -78,6 +101,8 @@ export const Contact = () => {
 
         <div className="flex flex-col gap-5 mt-14 w-full">
           <textarea
+            name="message"
+            required
             style={{
               background: "transparent",
               backgroundImage: `url(${textareaBg})`,
@@ -89,11 +114,14 @@ export const Contact = () => {
           ></textarea>
         </div>
         <div className="flex flex-col gap-5 mt-14">
-          <button className="hover:h-[71px] transition-all font-bold w-[300px] sm:w-[403px] h-[61px] text-xl justify-center items-center border-2 border-[#B8FE00] rounded-xl  bg-[#B8FE00] text-black ">
+          <button
+            type="submit"
+            className="hover:h-[71px] transition-all font-bold w-[300px] sm:w-[403px] h-[61px] text-xl justify-center items-center border-2 border-[#B8FE00] rounded-xl  bg-[#B8FE00] text-black "
+          >
             SEND YOUR MESSAGE
           </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };
