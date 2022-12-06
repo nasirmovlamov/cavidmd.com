@@ -1,4 +1,4 @@
-import cavidMdLogo from "images/cavidmd-logo.png";
+import cavidMdLogo from "images/cavidmd-logo.svg";
 import mobileNav from "images/mobileNav.svg";
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
