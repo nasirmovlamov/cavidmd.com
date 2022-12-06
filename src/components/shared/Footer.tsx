@@ -20,16 +20,24 @@ export const Footer = () => {
       <div className="md:text-base text-[7.5px]">&#169; 2022 CAVID MAMMADLI. ALL RIGHTS RESERVED</div>
       <div className="flex md:gap-6 gap-2 items-center">
         <a href="https://discord.gg/cavidmdw" target="_blank" rel="noreferrer">
-          <img src={discordLogo} alt="twitter" className="w-[22px] h-[16px] md:w-[35px] md:h-[25px]" />
+          <img src={discordLogo} alt="twitter" className="w-[22px] h-[16px] md:w-[35px] md:h-[25px] hover:scale-110" />
         </a>
         <a href="https://www.instagram.com/cavidmdw/" target="_blank" rel="noreferrer">
-          <img src={instagramLogo} alt="discord" className="w-[22px] h-[16px]  md:w-[35px] md:h-[25px]" />
+          <img
+            src={instagramLogo}
+            alt="discord"
+            className="w-[22px] h-[16px]  md:w-[35px] md:h-[25px] hover:scale-110"
+          />
         </a>
         <a href="https://twitter.com/cavidmdwpro" target="_blank" rel="noreferrer">
-          <img src={twitterLogo} alt="reddit" className="w-[22px] h-[16px]  md:w-[35px] md:h-[25px]" />
+          <img src={twitterLogo} alt="reddit" className="w-[22px] h-[16px]  md:w-[35px] md:h-[25px] hover:scale-110" />
         </a>
         <a href="https://www.reddit.com/r/CAVIDMDW/" target="_blank" rel="noreferrer">
-          <img src={redditLogo} alt="instagram" className="w-[19px] h-[20px]  md:w-[27px] md:h-[29px]" />
+          <img
+            src={redditLogo}
+            alt="instagram"
+            className="w-[19px] h-[20px]  md:w-[27px] md:h-[29px] hover:scale-110"
+          />
         </a>
       </div>
     </div>
