@@ -6,6 +6,7 @@ import contactBg from "images/contact-bg.png";
 import contactMobileBg from "images/contact-bg.png";
 import homeBg from "images/home-bg.png";
 import homeMobileBg from "images/home-mobile-bg.png";
+import nftPageBg from "images/nft-page-bg.png";
 
 export const bgChanger = (path: string, isDesktop: boolean) => {
   switch (path) {
@@ -22,7 +23,7 @@ export const bgChanger = (path: string, isDesktop: boolean) => {
       return isDesktop ? aboutBg : aboutMobileBg;
       break;
     case "/nft":
-      return isDesktop ? homeBg : homeBg;
+      return isDesktop ? nftPageBg : nftPageBg;
       break;
     case "/asset":
       return isDesktop ? assetBg : assetBg;
