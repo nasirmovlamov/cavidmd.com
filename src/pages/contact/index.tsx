@@ -1,8 +1,8 @@
-import contactArrow from "images/contact-arrow.png";
-import contactDiscord from "images/contact-discord.png";
-import contactInstagram from "images/contact-instagram.png";
-import contactReddit from "images/contact-reddit.png";
-import contactTwitter from "images/contact-twitter.png";
+import contactArrow from "images/contact-arrow.svg";
+import contactDiscord from "images/contact-discord.svg";
+import contactInstagram from "images/contact-instagram.svg";
+import contactReddit from "images/contact-reddit.svg";
+import contactTwitter from "images/contact-twitter.svg";
 import inputBg from "images/inputBg.png";
 import textareaBg from "images/textareaBg.png";
 import React from "react";
@@ -15,28 +15,28 @@ export const Contact = () => {
           CONTACT <br /> WITH ME
         </h1>
         <div className="flex gap-5 flex-wrap w-full md:ml-5">
-          <div className="flex flex-wrap flex-col items-center gap-1 ">
+          <div className="flex flex-wrap flex-col items-center gap-1 socialContact">
             <img src={contactArrow} alt="contact arrow" className="w-4" />
-            <a href="#">
-              <img src={contactDiscord} alt="" className="w-9 " />
+            <a href="https://discord.gg/cavidmdw">
+              <img src={contactDiscord} alt="" className="w-[35px] h-[35px] " />
             </a>
           </div>
-          <div className="flex flex-wrap flex-col items-center gap-1">
+          <div className="flex flex-wrap flex-col items-center gap-1 socialContact ">
             <img src={contactArrow} alt="contact arrow" className="w-4" />
-            <a href="#">
-              <img src={contactInstagram} alt="" className="w-9 " />
+            <a href="https://www.instagram.com/cavidmdw/">
+              <img src={contactInstagram} alt="" className="w-[35px] h-[35px] " />
             </a>
           </div>
-          <div className="flex flex-wrap flex-col items-center gap-1">
+          <div className="flex flex-wrap flex-col items-center gap-1 socialContact ">
             <img src={contactArrow} alt="contact arrow" className="w-4" />
-            <a href="#">
-              <img src={contactReddit} alt="" className="w-9 " />
+            <a href="https://www.reddit.com/r/CAVIDMDW/">
+              <img src={contactReddit} alt="" className="w-[31px] h-[31px] " />
             </a>
           </div>
-          <div className="flex flex-wrap flex-col items-center gap-1">
+          <div className="flex flex-wrap flex-col items-center gap-1 socialContact ">
             <img src={contactArrow} alt="contact arrow" className="w-4" />
-            <a href="#">
-              <img src={contactTwitter} alt="" className="w-9 " />
+            <a href="https://twitter.com/cavidmdwpro">
+              <img src={contactTwitter} alt="" className="w-[35px] h-[27px]  " />
             </a>
           </div>
         </div>

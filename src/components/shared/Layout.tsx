@@ -21,7 +21,8 @@ export const Layout: React.FC<LayoutPropsType> = ({ children }) => {
         style={{
           backgroundImage: `url(${bgChanger(location.pathname, width > 500)})`,
           backgroundSize: "cover",
-          backgroundPosition: "center"
+          backgroundPosition: "center",
+          paddingBottom: "60px"
         }}
       >
         <MobileMenu />

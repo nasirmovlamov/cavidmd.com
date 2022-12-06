@@ -11,3 +11,8 @@
 * {
   font-family: "Rene Bieder Demo";
 }
+
+.socialContact:hover img{
+  transform: scale(1.15);
+  transition: 0.2s;
+}
