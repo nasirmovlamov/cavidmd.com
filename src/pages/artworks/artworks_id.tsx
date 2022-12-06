@@ -44,7 +44,7 @@ export const SelectedArtwork = () => {
       root.style.setProperty("background-color", "black");
       const darkDiv = document.createElement("div");
       darkDiv.classList.add("dark-div");
-      darkDiv.style.setProperty("background-color", "rgba(0,0,0,0.5)");
+      darkDiv.style.setProperty("background-color", "rgba(0,0,0,0.60)");
       darkDiv.style.setProperty("position", "fixed");
       darkDiv.style.setProperty("top", "0");
       darkDiv.style.setProperty("left", "0");
