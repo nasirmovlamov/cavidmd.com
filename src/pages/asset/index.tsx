@@ -1,6 +1,5 @@
 import { useLoopring2 } from "components/hooks/useLoopring2";
 import { NftElement } from "components/shared/NftElement";
-import { TermsAndConditions } from "components/shared/TermsAndConditions";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "firebase-conf";
 import loadingIcon from "images/loading.png";

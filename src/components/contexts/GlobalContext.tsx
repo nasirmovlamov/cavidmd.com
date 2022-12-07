@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import { ModalContextProvider } from "./ModalContext";
+
 type GlobalContextType = {
   isDarkMode: boolean;
   setIsDarkMode: (isDarkMode: boolean) => void;
@@ -21,10 +23,9 @@ export const GlobalContext = React.createContext<GlobalContextType>({
 export const GlobalContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
-
   return (
     <GlobalContext.Provider value={{ isDarkMode, isMobileMenuOpen, setIsDarkMode, setIsMobileMenuOpen }}>
-      {children}
+      <ModalContextProvider>{children}</ModalContextProvider>
     </GlobalContext.Provider>
   );
 };

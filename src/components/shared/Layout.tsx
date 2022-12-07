@@ -14,17 +14,19 @@ type LayoutPropsType = {
 export const Layout: React.FC<LayoutPropsType> = ({ children }) => {
   const location = useLocation();
   const [width, height] = useWindowSize();
+  const bgStyle = () => {
+    if (location.pathname !== "/") {
+      return {
+        backgroundImage: `url(${bgChanger(location.pathname, width > 500)})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        paddingBottom: "60px"
+      };
+    }
+  };
   return (
     <div>
-      <div
-        className="min-h-[calc(100vh-60px)] "
-        style={{
-          backgroundImage: `url(${bgChanger(location.pathname, width > 500)})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          paddingBottom: "60px"
-        }}
-      >
+      <div className={`min-h-[calc(100vh-60px)] `} style={bgStyle()}>
         <MobileMenu />
         <Header />
         <div className="h-max">{children}</div>

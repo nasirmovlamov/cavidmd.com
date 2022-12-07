@@ -12,7 +12,7 @@ export const Footer = () => {
 
   return (
     <div
-      className="items-center h-[32px] md:h-[90px] md:pt-4   z-10 flex flex-nowrap  md:flex-wrap gap-y-6 justify-between md:px-16 box-content md:box-border py-1  md:py-4  bg-black bg-no-repeat bg-cover px-[13px] "
+      className="items-center h-[32px] md:h-[90px] md:pt-4   z-10 flex flex-nowrap  md:flex-wrap gap-y-6 justify-between md:px-16 box-content md:box-border py-1  md:py-4  bg-transparent bg-no-repeat bg-cover px-[13px] "
       style={{
         backgroundImage: `url(${width > 500 ? footerBg : footerMobileBg})`
       }}
