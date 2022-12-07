@@ -67,17 +67,9 @@ export const MobileMenu = () => {
         </div>
         <div className="flex gap-2 items-center h-[23px]">
           <MobileDot path={"/roadmap"} />
-          <a
-            href={
-              "https://firebasestorage.googleapis.com/v0/b/nft-metamask.appspot.com/o/frontend.pdf?alt=media&token=3b5607f5-60d7-4eec-b7bd-0ecd7b7127ca"
-            }
-            target={"_blank"}
-            download
-            rel="noreferrer"
-            className="leading-4"
-          >
+          <Link to={"/roadmap"} className="leading-4">
             ROADMAP
-          </a>
+          </Link>
         </div>
       </div>
 
