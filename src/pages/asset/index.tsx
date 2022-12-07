@@ -122,7 +122,7 @@ export const Asset = () => {
             e.preventDefault();
             connectWallet();
           }}
-          className="pb-5  relative pt-[45px] px-7 sm:px-10 mt-[69px] md:w-[842px] w-[350px] mx-auto sm:min-h-[818px] sm:pb-[100px]  sm:bg-transparent rounded-[20px] flex flex-wrap flex-col bg-[#B8FE00]"
+          className="pb-5  relative pt-[45px] px-7 sm:px-10 mt-[69px] md:w-[782px] w-[350px] mx-auto sm:min-h-[818px] sm:pb-[100px]  sm:bg-transparent rounded-[20px] flex flex-wrap flex-col bg-[#B8FE00]"
           style={{
             backgroundImage: `url(${width > 500 ? formConnectBg : null})`,
             backgroundRepeat: "no-repeat",
@@ -180,16 +180,19 @@ export const Asset = () => {
                 onChange={() => setIsTermsAccepted(!isTermsAccepted)}
                 className="bg-black w-[29px] h-[29px] sm:w-[49px] sm:h-[49px]"
               />
-              <p className="font-[b] md:text-base ml-1 md:ml-5 text-[10px] ">
+              <p className="font-[b] md:text-base ml-1 md:ml-2 text-[10px] ">
                 By continuing to use or access the Site, you agree <br /> to be bound by and subject to these terms.
               </p>
-              <button className="mt-5 sm:mt-0 z-10 sm:ml-10 w-full sm:w-[169px] h-[49px]   text-[15px] text-black bg-transparent  justify-center items-center border-2 border-black rounded-xl  hover:bg-black hover:text-[#B8FE00] transition-colors">
+              <button className="mt-5 sm:mt-0 z-10 sm:ml-3 w-full sm:w-[169px] h-[49px]   text-[15px] text-black bg-transparent  justify-center items-center border-2 border-black rounded-xl  hover:bg-black hover:text-[#B8FE00] transition-colors">
                 CONNECT WALLET
               </button>
             </div>
           </div>
 
-          <img src={formConnectArrow} className="hidden md:block absolute bottom-10 right-3 -z-0 w-[332px] h-[132px]" />
+          <img
+            src={formConnectArrow}
+            className="hidden md:block absolute bottom-10 -right-1 -z-0 w-[332px] h-[132px]"
+          />
         </form>
       </div>
     );
