@@ -122,7 +122,7 @@ export const Asset = () => {
             e.preventDefault();
             connectWallet();
           }}
-          className="pb-5 sm:pb-0 relative pt-[45px] px-7 sm:px-10 mt-[69px] md:w-[842px] w-[350px] mx-auto sm:min-h-[818px] sm:pb-[100px]  sm:bg-transparent rounded-[20px] flex flex-wrap flex-col bg-[#B8FE00]"
+          className="pb-5  relative pt-[45px] px-7 sm:px-10 mt-[69px] md:w-[842px] w-[350px] mx-auto sm:min-h-[818px] sm:pb-[100px]  sm:bg-transparent rounded-[20px] flex flex-wrap flex-col bg-[#B8FE00]"
           style={{
             backgroundImage: `url(${width > 500 ? formConnectBg : null})`,
             backgroundRepeat: "no-repeat",
