@@ -24,8 +24,34 @@ h6 {
   font-family: "r";
 }
 
-
 .socialContact:hover img {
   transform: scale(1.15);
   transition: 0.2s;
+}
+
+.formConnectText {
+  overflow-y: auto;
+  background: #000;
+}
+
+/* width */
+.formConnectText::-webkit-scrollbar {
+  width: 15px;
+}
+
+/* Track */
+.formConnectText::-webkit-scrollbar-track {
+  background: #b8fe00;
+  width: 15px;
+}
+
+/* Handle */
+.formConnectText::-webkit-scrollbar-thumb {
+  background: #9ed11b;
+  width: 15px;
+}
+
+/* Handle on hover */
+.formConnectText::-webkit-scrollbar-thumb:hover {
+  background: #9ad407;
 }

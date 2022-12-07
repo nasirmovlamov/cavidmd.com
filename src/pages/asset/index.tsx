@@ -1,18 +1,38 @@
+import { useWindowWidth } from "@react-hook/window-size";
 import { useLoopring2 } from "components/hooks/useLoopring2";
 import { NftElement } from "components/shared/NftElement";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "firebase-conf";
+import formConnectArrow from "images/formConnectArrow.svg";
+import formConnectBg from "images/formConnectBg.svg";
 import loadingIcon from "images/loading.png";
 import nftElement1 from "images/nftElement1.png";
 import nftElement2 from "images/nftElement2.png";
 import { useMetaMask } from "metamask-react";
 import React, { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 import { Bars } from "react-loader-spinner";
 
+const notifyError = () =>
+  toast.error("Please accept the terms and conditions.", { duration: 3000, position: "top-right" });
 export const Asset = () => {
+  const width = useWindowWidth();
   const { status: metaMaskStatus, connect, account } = useMetaMask();
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isTermsAccepted, setIsTermsAccepted] = useState(false);
+  const [isTermsAccepted, setIsTermsAccepted] = useState<any>(false);
+  const [isTermsAndConditionsOpen, setIsTermsAndConditionsOpen] = useState(false);
+
+  const connectWallet = () => {
+    if (!isTermsAccepted) {
+      notifyError();
+      return;
+    }
+    connect();
+  };
+
+  const openTermsAndConditions = () => {
+    setIsTermsAndConditionsOpen(true);
+  };
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -94,6 +114,87 @@ export const Asset = () => {
     }
   }, [metaMaskStatus, loopringStatus]);
 
+  if (isTermsAndConditionsOpen && metaMaskStatus === "notConnected") {
+    return (
+      <div className="mt-10 sm:mt-20">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            connectWallet();
+          }}
+          className="pb-5 sm:pb-0 relative pt-[45px] px-7 sm:px-10 mt-[69px] md:w-[842px] w-[350px] mx-auto sm:min-h-[818px] sm:pb-[100px]  sm:bg-transparent rounded-[20px] flex flex-wrap flex-col bg-[#B8FE00]"
+          style={{
+            backgroundImage: `url(${width > 500 ? formConnectBg : null})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+        >
+          <div className="flex flex-wrap flex-col">
+            <h1 className="text-5xl font-[b]">Terms and Conditions</h1>
+            <h2 className="text-xl text-[#444444] mt-2">Last Updated: 11.9.2022</h2>
+            <div className="p-2 bg-black mt-4">
+              <div className="bg-black py-6 px-6 text-white h-auto sm:h-[481px]  formConnectText">
+                <h3 className="text-2xl">Welcome to Cyber Crew!</h3>
+                <p className="mt-4 ">
+                  These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and use of the Cyber
+                  Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images, audio, code,
+                  files, and other materials and all of the features and services provided (collectively, the
+                  “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
+                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
+                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
+                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
+                  access the Site or use any Services made available via the Site. The Site is not directed to children
+                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
+                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
+                  audio, code, files, and other materials and all of the features and services provided (collectively,
+                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
+                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
+                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
+                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
+                  access the Site or use any Services made available via the Site. The Site is not directed to children
+                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
+                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
+                  audio, code, files, and other materials and all of the features and services provided (collectively,
+                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
+                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
+                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
+                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
+                  access the Site or use any Services made available via the Site. The Site is not directed to children
+                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
+                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
+                  audio, code, files, and other materials and all of the features and services provided (collectively,
+                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
+                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
+                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
+                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
+                  access the Site or use any Services made available via the Site. The Site is not directed to children
+                  under the age of 13.
+                </p>
+              </div>
+            </div>
+            <div className="mt-2 sm:mt-16 flex flex-wrap">
+              <input
+                type="checkbox"
+                value={isTermsAccepted}
+                onChange={() => setIsTermsAccepted(!isTermsAccepted)}
+                className="bg-black w-[29px] h-[29px] sm:w-[49px] sm:h-[49px]"
+              />
+              <p className="font-[b] md:text-base ml-1 md:ml-5 text-[10px] ">
+                By continuing to use or access the Site, you agree <br /> to be bound by and subject to these terms.
+              </p>
+              <button className="mt-5 sm:mt-0 z-10 sm:ml-10 w-full sm:w-[169px] h-[49px]   text-[15px] text-black bg-transparent  justify-center items-center border-2 border-black rounded-xl  hover:bg-black hover:text-[#B8FE00] transition-colors">
+                CONNECT WALLET
+              </button>
+            </div>
+          </div>
+
+          <img src={formConnectArrow} className="hidden md:block absolute bottom-10 right-3 -z-0 w-[332px] h-[132px]" />
+        </form>
+      </div>
+    );
+  }
+
   if (metaMaskStatus === "initializing") {
     return (
       <div className="mt-20">
@@ -114,21 +215,21 @@ export const Asset = () => {
     );
   }
 
-  if (metaMaskStatus === "notConnected")
+  if (!isTermsAndConditionsOpen && metaMaskStatus === "notConnected")
     return (
       <>
         <div className="mt-20">
           <div className="flex flex-wrap flex-col mx-auto w-max items-center gap-9 md:mt-[261px]">
             <button
-              onClick={connect}
+              onClick={openTermsAndConditions}
               className="w-[261px] h-[61px]  text-2xl sm:w-[401px] sm:h-[91px] bg-transparent md:text-3xl justify-center items-center border-2 border-[#B8FE00] rounded-xl text-white hover:bg-[#B8FE00] hover:text-black transition-colors"
             >
               CONNECT WALLET
             </button>
-            <p className="text-white w-[360px] text-base  sm:w-[600px]  md:w-[760px]  2xl:w-[1348px] sm:text-3xl text-center">
+            {/* <p className="text-white w-[360px] text-base  sm:w-[600px]  md:w-[760px]  2xl:w-[1348px] sm:text-3xl text-center">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
               dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            </p>
+            </p> */}
           </div>
         </div>
       </>
