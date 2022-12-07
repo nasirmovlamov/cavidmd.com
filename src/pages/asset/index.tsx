@@ -218,7 +218,7 @@ export const Asset = () => {
   if (!isTermsAndConditionsOpen && metaMaskStatus === "notConnected")
     return (
       <>
-        <div className="mt-20">
+        <div className="mt-24">
           <div className="flex flex-wrap flex-col mx-auto w-max items-center gap-9 md:mt-[261px]">
             <button
               onClick={openTermsAndConditions}
