@@ -44,7 +44,7 @@ export const SelectedArtwork = () => {
       root.style.setProperty("background-color", "black");
       const darkDiv = document.createElement("div");
       darkDiv.classList.add("dark-div");
-      darkDiv.style.setProperty("background-color", "rgba(0,0,0,0.60)");
+      darkDiv.style.setProperty("background-color", "rgba(0,0,0,0.70)");
       darkDiv.style.setProperty("position", "fixed");
       darkDiv.style.setProperty("top", "0");
       darkDiv.style.setProperty("left", "0");
@@ -68,11 +68,7 @@ export const SelectedArtwork = () => {
     return (
       <div className="mt-10 md:mt-28 md:mx-auto xl:w-max flex gap-10 flex-wrap justify-center mx-10 mb-20">
         <div className="flex mx-auto gap-10 md:gap-20">
-          <img
-            src={artwork.data.img}
-            alt=""
-            className="w-[360px] md:w-[560px] h-auto shadow-lg shadow-gray-800 rounded-lg"
-          />
+          <img src={artwork.data.img} alt="" className="w-[360px] md:w-[560px] h-auto shadow-lg  rounded-lg" />
         </div>
         <div className="flex flex-col text-white max-w-lg">
           <h1 className=" text-3xl md:text-5xl  mt-0 md:mt-0 text-[#B8FE00] font-bold leading-10">
