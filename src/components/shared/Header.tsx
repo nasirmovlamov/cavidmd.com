@@ -35,17 +35,9 @@ export const Header = () => {
       <Link to={"/asset"} className={`${headerLinkChecker(location.pathname, "/asset")} hidden md:flex`}>
         ASSET
       </Link>
-      <a
-        href={
-          "https://firebasestorage.googleapis.com/v0/b/nft-metamask.appspot.com/o/frontend.pdf?alt=media&token=3b5607f5-60d7-4eec-b7bd-0ecd7b7127ca"
-        }
-        target={"_blank"}
-        download
-        className={`${headerLinkChecker(location.pathname, "/roadmap")} hidden md:flex`}
-        rel="noreferrer"
-      >
+      <Link to={"/roadmap"} className={`${headerLinkChecker(location.pathname, "/roadmap")} hidden md:flex`}>
         ROADMAP
-      </a>
+      </Link>
     </div>
   );
 };

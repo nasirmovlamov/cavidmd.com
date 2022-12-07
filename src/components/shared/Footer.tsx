@@ -1,6 +1,6 @@
 import { useWindowSize } from "@react-hook/window-size";
 import discordLogo from "images/discord.svg";
-import footerBg from "images/footer-bg.png";
+import footerBg from "images/footer-bg.svg";
 import footerMobileBg from "images/footer-mobile-bg.svg";
 import instagramLogo from "images/instagram.svg";
 import redditLogo from "images/reddit.svg";
