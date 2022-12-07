@@ -1,18 +1,31 @@
 @font-face {
-  font-family: "Rene Bieder Alt Demo";
-  src: url("../fonts/Rene Bieder - Galano Grotesque Alt DEMO Bold.otf");
+  font-family: "r";
+  src: url("../fonts/Galano Grotesque Alt Light.otf");
 }
 
 @font-face {
-  font-family: "Rene Bieder Demo";
-  src: url("../fonts/Rene Bieder - Galano Grotesque DEMO Bold.otf");
+  font-family: "b";
+  src: url("../fonts/Galano Grotesque Alt Semi Bold.otf");
+}
+header {
+  font-family: "b";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "b";
 }
 
 * {
-  font-family: "Rene Bieder Demo";
+  font-family: "r";
 }
 
-.socialContact:hover img{
+
+.socialContact:hover img {
   transform: scale(1.15);
   transition: 0.2s;
 }
