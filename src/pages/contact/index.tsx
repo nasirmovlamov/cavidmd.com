@@ -16,7 +16,7 @@ export const Contact = () => {
   const sendEmail = async (e: FormEvent) => {
     e.preventDefault();
     try {
-      const response = await emailjs.sendForm("service_f1v3jiq", "template_t8ft1ba", form.current, "FVKe1ESsu-amgS5E4");
+      const response = await emailjs.sendForm("service_qkzpj9o", "template_5yv6tf8", form.current, "mUeKi8aPYFhvWITmO");
       console.log(response);
       notify();
     } catch (error) {
