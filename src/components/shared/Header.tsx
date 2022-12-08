@@ -7,7 +7,7 @@ import { headerLinkChecker } from "../../utility/headerLinkChecker";
 import { GlobalContext } from "../contexts/GlobalContext";
 
 export const Header = () => {
-  const { isMobileMenuOpen, setIsMobileMenuOpen } = useContext(GlobalContext);
+  const { setIsMobileMenuOpen } = useContext(GlobalContext);
 
   return (
     <header className="justify-start xl:gap-12 md:justify-center md:w-max md:mx-auto flex gap-6 lg:gap-8 pt-8 text-xl text-white z-10 w-full mx-10 md:h-auto items-center">
