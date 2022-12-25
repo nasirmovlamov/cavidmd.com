@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useWindowWidth } from "@react-hook/window-size";
 import { useLoopring2 } from "components/hooks/useLoopring2";
 import { NftElement } from "components/shared/NftElement";
