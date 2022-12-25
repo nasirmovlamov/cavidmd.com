@@ -48,10 +48,10 @@ export const Header = () => {
         ASSET
       </Link>
       <Link
-        to={"/roadmap"}
-        className={`${headerLinkChecker(location.pathname, "/roadmap")} hidden md:flex font-[b] w-[102px]`}
+        to={"/guide"}
+        className={`${headerLinkChecker(location.pathname, "/guide")} hidden md:flex font-[b] w-[102px]`}
       >
-        ROADMAP
+        GUIDE
       </Link>
     </header>
   );

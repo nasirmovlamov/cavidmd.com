@@ -5,9 +5,6 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "firebase-conf";
 import formConnectArrow from "images/formConnectArrow.svg";
 import formConnectBg from "images/formConnectBg.svg";
-import loadingIcon from "images/loading.png";
-import nftElement1 from "images/nftElement1.png";
-import nftElement2 from "images/nftElement2.png";
 import { useMetaMask } from "metamask-react";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
@@ -32,10 +29,6 @@ export const Asset = () => {
 
   const openTermsAndConditions = () => {
     setIsTermsAndConditionsOpen(true);
-  };
-
-  const openModal = () => {
-    setIsModalOpen(true);
   };
 
   const {
@@ -137,39 +130,37 @@ export const Asset = () => {
               <div className="bg-black py-6 px-6 text-white h-auto sm:h-[481px]  formConnectText">
                 <h3 className="text-2xl">Welcome to Cyber Crew!</h3>
                 <p className="mt-4 ">
-                  These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and use of the Cyber
-                  Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images, audio, code,
-                  files, and other materials and all of the features and services provided (collectively, the
-                  “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
-                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
-                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
-                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
-                  access the Site or use any Services made available via the Site. The Site is not directed to children
-                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
-                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
-                  audio, code, files, and other materials and all of the features and services provided (collectively,
-                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
-                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
-                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
-                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
-                  access the Site or use any Services made available via the Site. The Site is not directed to children
-                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
-                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
-                  audio, code, files, and other materials and all of the features and services provided (collectively,
-                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
-                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
-                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
-                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
-                  access the Site or use any Services made available via the Site. The Site is not directed to children
-                  under the age of 13. These Terms of Service (“Agreement”) governs your (“you” or “your”) access to and
-                  use of the Cyber Crew website located at CyberCrewNFT.io (the “Site”), and includes all text, images,
-                  audio, code, files, and other materials and all of the features and services provided (collectively,
-                  the “Content”). The Site, and any other features, tools, materials, or other services offered by Cyber
-                  Crew are referred to here as the “Service.” Please read this Agreement carefully before accessing or
-                  using the Site. By accessing or using any part of the Site, you agree to the terms and conditions of
-                  this Agreement. If you do not agree to all the terms and conditions of this Agreement, you should not
-                  access the Site or use any Services made available via the Site. The Site is not directed to children
-                  under the age of 13.
+                  <h4>Terms and Conditions</h4>
+                  <h4>Agreement between User and https://www.cavidmdw.com</h4>
+                  Welcome to https://www.cavidmdw.com. The https://www.cavidmdw.com website (the "Site") is composed of
+                  various web pages operated by CavidMDW ("CavidMDW (CMDW)"). https://www.cavidmdw.com is offered to you
+                  conditioned on your acceptance without modification of the terms, conditions, and notices contained
+                  herein (the "Terms"). Your use of https://www.cavidmdw.com constitutes your agreement to all such
+                  Terms. Please read these terms carefully, and keep a copy of them for your reference. For the purpose
+                  of these Terms and Conditions https://www.cavidmdw.com is considered the same as CavidMDW.com.
+                  https://www.cavidmdw.com is a NFT (Non-Fungible Token) Art and Asset Management Site. This website was
+                  designed to be a showcase for CavidMDW's art, a place for holders of certain CavidMDW NFTs to download
+                  their asset files, and a place to learn more about CavidMDW and his projects.
+                  <h4>Privacy</h4>
+                  Your use ofhttps://www.cavidmdw.com is subject to CavidMDW (CMDW)'s Privacy Policy. Please review our
+                  Privacy Policy¹, which also governs the Site and informs users of our data collection practices.
+                  <h4>Electronic Communications</h4>
+                  Visiting https://www.cavidmdw.com or sending emails to CavidMDW (CMDW) constitutes electronic
+                  communications. You consent to receive electronic communications and you agree that all agreements,
+                  notices, disclosures and other communications that we provide to you electronically, via email and on
+                  the Site, satisfy any legal requirement that such communications be in writing.
+                  <h4>Service Users</h4>
+                  By using our services you are a service user (“Service User”). By becoming a Service User, you agree:
+                  (a) to provide accurate, current and complete information about yourself; (b) to maintain and promptly
+                  update from time to time as necessary your information; (c) to immediately notify us if you discover
+                  or otherwise suspect any security breaches related to the Services; (d) that you are fully responsible
+                  for all activity on the Services that occurs under your email and/or password combination; (e) to not
+                  attempt to circumvent or bypass restricted token-gated content on this site by trading ownership of
+                  NFTs with the intent to collect, view, or download the associated token-gated files and services; and
+                  (f) to not redistribute locked, token-gated content or services associated with your NFT to any third
+                  party without express written consent from CavidMDW.com. We may, in our sole discretion, refuse to
+                  allow you to become a Service User, or limit the number of User Accounts or Digital Wallets (as
+                  defined below) that you may
                 </p>
               </div>
             </div>
@@ -275,6 +266,10 @@ export const Asset = () => {
                 />
               );
             })}
+
+          {loopringStatus === "succeed" && nftList.status === "succeed" && (
+            <div>{nftList.data.length < 1 && <>No NFTs found</>}</div>
+          )}
         </div>
       </div>
     );

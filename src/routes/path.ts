@@ -8,7 +8,7 @@ const ARTWORK_ID = "/artwork/:id";
 const CONTACT = "/contact";
 const NFT = "/nft";
 const ASSET = "/asset";
-const ROADMAP = "/roadmap";
+const ROADMAP = "/guide";
 
 interface Path {
   HOME: typeof HOME;
