@@ -129,7 +129,7 @@ export const Asset = () => {
             <h2 className="text-xl text-[#444444] mt-2">Last Updated: 11.9.2022</h2>
             <div className="p-2 bg-black mt-4">
               <div className="bg-black py-6 px-6 text-white h-auto sm:h-[481px]  formConnectText">
-                <h3 className="text-2xl">Welcome to Cyber Crew!</h3>
+                <h3 className="text-2xl">Welcome to Cavid MDW!</h3>
                 <p className="mt-4 ">
                   <h4>Terms and Conditions</h4>
                   <h4>Agreement between User and https://www.cavidmdw.com</h4>
