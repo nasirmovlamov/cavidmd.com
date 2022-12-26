@@ -621,6 +621,9 @@ export const Asset = () => {
           {loopringStatus === "succeed" && nftList.status === "succeed" && (
             <div>{nftList.data.length < 1 && <>No NFTs found</>}</div>
           )}
+
+          {nftList.status === "failed" && <div>{nftList.data.length < 1 && <>Something went wrong</>}</div>}
+          {loopringStatus === "failed" && <div>{nftList.data.length < 1 && <>Something went wrong</>}</div>}
         </div>
       </div>
     );
