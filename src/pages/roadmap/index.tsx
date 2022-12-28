@@ -38,7 +38,10 @@ export const Roadmap = () => {
     <div className="mt-10  md:mt-[200px]  mx-auto w-max gap-9 flex flex-wrap flex-col pb-20">
       {roadMaps.status === "succeeded" &&
         roadMaps.data.map((roadmap) => (
-          <h1 key={roadmap.name} className="flex flex-col gap-4 text-3xl text-white hover:text-[#B8FE00] font-[b]">
+          <h1
+            key={roadmap.name}
+            className="text-center text-[18px] sm:text-3xl  px-10 sm:px-[initial] flex flex-col gap-4 text-3xl text-white hover:text-[#B8FE00] font-[b]"
+          >
             <a href={roadmap.pdf_link} target="_blank" download rel="noreferrer" className="font-[b] uppercase">
               {roadmap.name}
             </a>

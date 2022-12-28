@@ -66,9 +66,9 @@ export const MobileMenu = () => {
           </Link>
         </div>
         <div className="flex gap-2 items-center h-[23px]">
-          <MobileDot path={"/roadmap"} />
-          <Link to={"/roadmap"} className="leading-4">
-            ROADMAP
+          <MobileDot path={"/guide"} />
+          <Link to={"/guide"} className="leading-4">
+            GUIDE
           </Link>
         </div>
       </div>
